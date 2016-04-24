@@ -1,0 +1,71 @@
+-- Haskell Playground 1.0
+mapFilter' (*2) (\x -> odd x) [1..10]
+
+all
+(&&)
+
+
+all (>2) [3..10]
+all' (>2) [3..10]
+all'' (>2) [3..10]
+
+
+[ (x, factors x) | x <- [1..10] ]
+
+
+all'' isPrime [2,3,5,7]
+all isPrime [2,3,5,7]
+any isPrime [2,3,5,7]
+any' isPrime [2,3,5,7]
+
+takeWhile
+takeWhile isPrime [2..10] == takeWhile' isPrime [2..10]
+
+takeWhile' isPrime [2,3,5,6,7,8]
+takeWhile'' isPrime [2,3,4]
+takeWhile''' isPrime [2,3,5,6,7]
+
+let numbers = [4,6,8,9,11,12,13,14]
+dropWhile (not . isPrime) numbers
+dropWhile' (not . isPrime) numbers
+
+dropWhile (not . isPrime) numbers
+dropWhile' (not . isPrime) numbers
+
+
+map isPrime [2..10] == map' isPrime [2..10]
+
+filter isPrime [2..10]
+filter' isPrime [2..10]
+
+dec2int [4,2,4,1,3]
+
+let myUnCurried (x,y) = x * y
+myUnCurried (2,3)
+
+let mul2 = curry' myUnCurried 2
+mul2 3
+
+
+let myCurried x y  = ( x + y )^2
+let test3 = myCurried 3
+test3 4
+
+let uncurriedf = uncurry' myCurried
+uncurriedf(3,4)
+
+let int2bin = unfold (==0) (`mod` 2) (`div` 2)
+
+
+chop8 [1..32] == chop8' [1..32]
+
+
+map isPrime [2..10] == map'' isPrime [2..10]
+
+let iter1 = take 16 $ iterate (*2) 1
+
+let iter2 = take 16 $ iterate' (*2) 1
+
+iter1 == iter2
+
+

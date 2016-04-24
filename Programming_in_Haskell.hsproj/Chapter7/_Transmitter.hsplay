@@ -1,0 +1,15 @@
+-- Haskell Playground 1.0
+take 32 $ iterate (*2) 1 
+
+bin2int [1,0,1,1]
+int2bin 13
+
+make8 . int2bin $ 13
+
+make8 . int2bin . ord $ 'a'
+let code = encode $ "abc"
+decode code
+
+
+
+transmitt "Haskell is fun"

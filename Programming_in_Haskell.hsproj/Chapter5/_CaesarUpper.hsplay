@@ -1,0 +1,13 @@
+-- Haskell Playground 1.0
+let2int 'A' 
+let2int 'B' 
+int2let $ let2int 'B' 
+
+shift 4 'a'
+shift 4 'A'
+
+
+encode (-5) $ encode 5 "What about Upper Casing letter"
+
+
+

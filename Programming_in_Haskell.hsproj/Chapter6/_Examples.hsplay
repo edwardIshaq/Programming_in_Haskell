@@ -1,0 +1,30 @@
+-- Haskell Playground 1.0
+factorial' 5 == factorial 5
+
+length [1..10]
+
+reverse [1..10]
+
+insert 4 [1..6]
+
+isort [5,3,8,3,7,9,3,2,1,2,3]
+
+zip ['a'..'z'] [1..100]
+
+drop 6 [1..20]
+
+
+qsort [5,3,8,3,7,9,3,2,1,2,3] == isort [5,3,8,3,7,9,3,2,1,2,3]
+
+
+[fibonacci x | x <- [0..20]]
+
+
+
+
+
+even 89
+odd 89
+
+evens "abcdefghi"
+odds "abcdefghi"

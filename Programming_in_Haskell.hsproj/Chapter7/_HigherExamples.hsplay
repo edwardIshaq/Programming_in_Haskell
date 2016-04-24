@@ -1,0 +1,21 @@
+-- Haskell Playground 1.0
+
+-- map applied to itself
+doubleMap
+
+length [1..10] == length' [1..10]
+length [] == length' []
+
+reverse' [1..10] == reverse'' [1..10]
+
+reverse
+
+(g • f ) 99
+
+odd 7 == odd' 7
+
+twice (*2) 2
+
+let hammer = compose [(2*), (10+), (^2) ]
+hammer 5 == ((5 ^ 2) + 10 ) * 2
+

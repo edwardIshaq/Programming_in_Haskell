@@ -1,0 +1,30 @@
+-- Haskell Playground 1.0
+halve [1..12]
+
+
+safetail3 []
+safetail3 [1..6]
+
+False `or1` False
+False `or1` True
+True `or1` False
+True `or1` True
+
+
+--[(b1, b2) | b1,b2 <- [True, False]]
+
+let options = [(a,b) | b <- [False, True], a <- [False, True]]
+
+options
+map (uncurry or1) options
+map (uncurry or2) options
+map (uncurry or3) options
+map (uncurry or4) options
+
+map (uncurry and1) options
+map (uncurry and2) options
+
+mult 2 3  6
+mult2 2 3  6
+
+

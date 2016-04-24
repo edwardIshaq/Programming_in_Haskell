@@ -1,0 +1,36 @@
+-- Haskell Playground 1.0
+5 ^ 7 == 5 `exp` 7
+
+2 `exp` 10
+
+concat [[],[1..4],[],[5..9]]
+concat [[1..10], [11..20]]
+
+concat $ replicate 10 "lo"
+
+let letters = ['a'..'z']
+
+letters !! 9
+
+
+elem 'P' letters
+
+merge [1,3..11] [2,4..20]
+merge [1,3..11] []
+merge [] [2,4..10]
+merge [] []
+
+halve [1..14]
+
+
+msort [1,3,5,1,2,55,7,8,2,3,2,4,53,7,8]
+
+
+
+sum [1.2, 3.2, 234.23]
+
+take' 100 [2,5..30]
+
+last [2,5..30]
+last' [2,5..30]
+last' []

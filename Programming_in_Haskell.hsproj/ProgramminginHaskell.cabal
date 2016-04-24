@@ -1,0 +1,21 @@
+name: ProgramminginHaskell
+version: 1.0
+cabal-version: 1.6
+build-type: Simple
+license: AllRightsReserved
+stability: experimental
+Executable ProgramminginHaskell
+  main-is: Programming_in_Haskell.hs
+  buildable: True
+  build-depends:
+      base -any
+  other-modules:
+      Chapter4
+      Chapter7.Transmitter
+      Chapter7.Excercise
+      Chapter7.HigherExamples
+      Chapter6.Examples
+      Chapter6.Excercise
+      Chapter5.Excercise
+      Chapter5.CaesarUpper
+      Chapter5.Chapter5
