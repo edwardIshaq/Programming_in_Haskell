@@ -12,6 +12,7 @@ Executable ProgramminginHaskell
   other-modules:
       Chapter4
       Chapter7.Transmitter
+      Chapter7.Transmitter2
       Chapter7.Excercise
       Chapter7.HigherExamples
       Chapter6.Examples

@@ -1,0 +1,31 @@
+-- Haskell Playground 1.0
+let p1 = [1,1,1]
+let p2 = [1,0,1]
+
+parity p1
+parityExtend p1
+
+parity p2
+
+parity . int2bin $ 481
+
+let encodedA = encode "A"
+let pencodedA = pencode "A"
+
+encodedA
+pencodedA
+
+parityCheck pencodedA == encodedA
+
+let brokenPEncodedA = init pencodedA ++ [1]
+brokenPEncodedA
+parityCheck brokenPEncodedA
+
+
+let encodedMsg = pencode "Hello Parity"
+pdecode encodedMsg
+
+transmitt2 "Hello Parity"
+transmittChppy "Hello Parity"
+
+
