@@ -1,0 +1,10 @@
+-- Haskell Playground 1.0
+-- BASIC Parsers examples
+
+parse (return 5) "hello"
+
+parse (failure) "woooow"
+
+parse item "sdflkja"
+
+parse p1_3' "abcdef"

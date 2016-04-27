@@ -10,6 +10,7 @@ Executable ProgramminginHaskell
   build-depends:
       base -any
   other-modules:
+      Chapter8.FunctionalParsers
       Chapter4
       Chapter7.Transmitter
       Chapter7.Transmitter2
