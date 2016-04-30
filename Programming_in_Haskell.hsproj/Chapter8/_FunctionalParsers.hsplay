@@ -1,10 +1,29 @@
 -- Haskell Playground 1.0
 -- BASIC Parsers examples
 
-parse (return 5) "hello"
+parse (result 5) "hello"
 
-parse (failure) "woooow"
+parse (zero) "woooow"
 
 parse item "sdflkja"
 
 parse p1_3' "abcdef"
+
+('a', 'b')
+
+parse digit "6234231"
+
+parse (char 'x') "xclkj"
+
+parse lower "bc"
+fst $ head $ parse item "adfdsa"
+
+parse digit "312123"
+
+'a' <= 'a'
+
+parse (lower `bind` \x ->
+        lower `bind` \y -> 
+        result [x,y]) "abcd"
+        
+
