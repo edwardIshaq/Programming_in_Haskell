@@ -27,3 +27,12 @@ parse (lower `bind` \x ->
         result [x,y]) "abcd"
         
 
+
+parse letter "A324kjh"
+parse letter "g324kjh"
+
+parse word "words are just"
+parse word' "words are just"
+
+parse word  "4"
+
