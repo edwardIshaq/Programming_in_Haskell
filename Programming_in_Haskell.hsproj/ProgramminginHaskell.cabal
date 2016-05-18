@@ -4,21 +4,25 @@ cabal-version: 1.6
 build-type: Simple
 license: AllRightsReserved
 stability: experimental
+x-ghc-framework-version: 7.10.3-5.9-2
+x-last-ide-version: HfM1.2.1
 Executable ProgramminginHaskell
   main-is: Programming_in_Haskell.hs
   buildable: True
   build-depends:
       base -any
   other-modules:
-      Chapter8.FunctionalParsers2
       Chapter8.FunctionalParsers
-      Chapter4
-      Chapter7.Transmitter
-      Chapter7.Transmitter2
+      Chapter8.FunctionalParsers3
+      Chapter8.FunctionalParsers2
       Chapter7.Excercise
       Chapter7.HigherExamples
-      Chapter6.Examples
-      Chapter6.Excercise
+      Chapter7.Transmitter
+      Chapter7.Transmitter2
       Chapter5.Excercise
       Chapter5.CaesarUpper
       Chapter5.Chapter5
+      Chapter4
+      Chapter9.Calculator
+      Chapter6.Excercise
+      Chapter6.Examples
