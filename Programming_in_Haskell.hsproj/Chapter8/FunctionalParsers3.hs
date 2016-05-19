@@ -75,7 +75,7 @@ sat p = do x <- item
 
 
 char :: Char -> Parser Char
-char x = sat (\y -> y == x)
+char x = sat (== x)
 
 digit :: Parser Char
 digit = sat isDigit
@@ -92,6 +92,11 @@ letter = sat isAlpha
 alphanum :: Parser Char
 alphanum = sat isAlphaNum
 
+string :: String -> Parser String
+string [] = return []
+string (x:xs) = do char x
+                   string xs
+                   return (x:xs)
 {-------
 PLUS
 choice combinator
@@ -111,11 +116,6 @@ word = neWord +++ return ""
                      return (x:xs)
 
 
-word' :: Parser String
-word' =  letter `bind`  \x  ->
-         word   `bind`  \xs ->
-         return (x:xs)
-
 parseMap :: (a -> b) -> Parser a -> Parser b
 parseMap f (P pa) = P(\inp -> case pa inp of
                             []          -> []
@@ -130,3 +130,11 @@ pureParser = return
 instance Monad Parser where
   return  = return
   (>>=)   = bind
+
+many :: Parser a -> Parser [a]
+many p = many1 p +++ return []
+
+many1 :: Parser a -> Parser [a]
+many1 p = do v <- p
+             vs <- many p
+             return (v:vs)
