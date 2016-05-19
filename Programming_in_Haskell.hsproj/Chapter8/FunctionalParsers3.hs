@@ -1,4 +1,4 @@
-module Chapter8.FunctionalParsers2 where
+module Chapter8.FunctionalParsers3 where
 --see orignial
 --http://www.cs.nott.ac.uk/~pszgmh/monparsing.pdf
 
@@ -138,3 +138,39 @@ many1 :: Parser a -> Parser [a]
 many1 p = do v <- p
              vs <- many p
              return (v:vs)
+
+ident :: Parser String
+ident = do x  <- lower
+           xs <- many alphanum
+           return (x:xs)
+
+nat :: Parser Int
+nat = do xs <- many1 digit
+         return $ read xs
+
+space :: Parser ()
+space = do many (sat isSpace)
+           return ()
+
+token :: Parser a -> Parser a
+token p = do space
+             v <- p
+             space
+             return v
+
+identifier :: Parser String
+identifier = token ident
+
+natural :: Parser Int
+natural = token nat
+
+symbol :: String -> Parser String
+symbol xs = token (string xs)
+
+p :: Parser [Int]
+p = do  token (symbol "[")
+        n  <- natural
+        ns <- many (do  symbol ","
+                        natural)
+        symbol "]"
+        return (n:ns)
