@@ -174,3 +174,33 @@ p = do  token (symbol "[")
                         natural)
         symbol "]"
         return (n:ns)
+
+-- Arithmetic Expressions
+{-
+expr    ::== term (+ expr | ∊)
+term    ::== factor (* term | ∊)
+factor  ::== (expr) | nat
+nat     ::== 0 | 1 | 2 | 3 ...
+-}
+
+expr :: Parser Int
+expr =
+  do t <- term
+    do  symbol "+"
+        e <- expr
+        return (t + e)
+    +++ return t
+
+term :: Parser Int
+term =  do f <- factor
+          do symbol "*"
+             t <- term
+             return (f * t)
+        +++ return f
+
+factor :: Parser Int
+factor = do symbol "("
+            e <- expr
+            symbol ")"
+            return e
+          +++ natural
